@@ -1,0 +1,11 @@
+header h1 {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: red; }
+
+p:hover {
+  background-color: olive;
+  text-decoration: underline;
+  color: black; }
+
+/*# sourceMappingURL=style.css.map */

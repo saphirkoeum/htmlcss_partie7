@@ -1,0 +1,15 @@
+@mixin exoTitle{
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+header{
+  h1{
+    @include exoTitle;
+  }
+}
+p:hover{
+  background-color: olive;
+  text-decoration: underline;
+  color: black;
+}

@@ -1,0 +1,57 @@
+//Les variables permet de stocker des informations comme couleur, police
+$titleColor: blue;
+$subtitleColor: rgb(43, 152, 213);
+$corpsColor: rgb(110, 110, 110);
+
+//les mixins permet de créer des groupes de déclarations css  qu'on souhaite reutiliser sur l'ensemble de notre code.
+// mixin: sert à appliquer plusieurs styles en une ligne
+  @mixin titre {
+    font-size: 2em;
+    color: #e80000;
+    text-transform: uppercase;
+    font-family: fantasy;
+  }
+  @mixin paragraphe{
+    font-size: 1.5em;
+    color: #eaabe0;
+    font-family: cursive;
+  }
+  @mixin titre4 {
+    font-size: 1em;
+    color:#79c9f2;
+    font-family: sans-serif;
+    text-decoration: overline;
+  }
+  @mixin treatmentList {
+  color: #3cad85;
+  text-decoration: underline;
+}
+@mixin exoTitle{
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+header{
+  h1{
+    @include exoTitle;
+  }
+  p{
+    color: black;
+  }
+}
+h2 {
+  color: $titleColor;
+  @include titre;
+}
+h3 {
+  color: $subtitleColor;
+}
+p {
+@include paragraphe;
+}
+h4 {
+  color: $subtitleColor;
+  @include titre4;
+}
+.par_1{
+  @include treatmentList;
+}
